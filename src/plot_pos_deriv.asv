@@ -1,3 +1,6 @@
+% Plots the position signal and its derivative
+
+
 function p = plot_pos_deriv(pos, deriv, norm_deriv_y, name)
     p = tiledlayout(2,1)
 
@@ -11,9 +14,9 @@ function p = plot_pos_deriv(pos, deriv, norm_deriv_y, name)
 
     %Plot Derivate
     nexttile
-    title('Derivative of Position')
-    ylabel('Degree per step') 
     plot(deriv)
+    title('Derivative of Position')
+    ylabel('')
     axis([0 10 -norm_deriv_y norm_deriv_y])
 
     exportgraphics(p, join(['../plots/','ex_202_', name, '.jpg']))
